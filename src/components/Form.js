@@ -14,7 +14,7 @@ export const Form = ({ children, form, readOnly = false, changeForm }) => {
               <label htmlFor="exampleFormControlTextarea1">{item.label}</label>
               <input type="text"
                      className="form-control"
-                     placeholder="Введите текст..."
+                     placeholder="Enter text..."
                      value={item.value}
                      readOnly={readOnly}
                      name={item.label}
@@ -41,7 +41,7 @@ export const Form = ({ children, form, readOnly = false, changeForm }) => {
               <label htmlFor="exampleFormControlTextarea1">{item.label}</label>
               <input type="datetime-local"
                      className="form-control"
-                     placeholder="Введите дату и время..."
+                     placeholder="Enter date and time..."
                      value={item.value}
                      name={item.label}
                      readOnly={readOnly}

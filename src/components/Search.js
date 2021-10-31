@@ -14,7 +14,7 @@ export const Search = () => {
     <div className="form-group">
       <input type="text"
              className="form-control"
-             placeholder="Поиск поля по названию..."
+             placeholder="Search for a field by name..."
              value={value}
              onChange={event => {
                setValue(event.target.value);
