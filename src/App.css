@@ -1,0 +1,38 @@
+.field {
+  display: inline-flex;
+  margin-right: 20px;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar {
+  padding: 10px 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.field.active {
+  background: blue;
+  color: #fff;
+}
+
+.btn--link {
+  color: #007bff;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.btn--link:hover {
+  color: #ffffff;
+  border: 1px solid var(--bs-dark);
+  background-color: var(--bs-dark);
+}
