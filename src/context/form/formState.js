@@ -4,7 +4,6 @@ import { formReducer } from './formReducer';
 import {
   ADD_FIELD,
   CHANGE_FIELD,
-  DELETE_FIELD,
   SEARCH_FIELD
 } from '../types';
 
@@ -22,23 +21,13 @@ export const FormState = ({ children }) => {
   const addField = type => {
     const form = [...state.form];
     form.push({
+      id: Symbol('id').toString(),
       label: type,
       value: ''
     });
     console.log(type);
     dispatch({
       type: ADD_FIELD,
-      payload: form
-    });
-  };
-
-  const deleteField = type => {
-    const form = [...state.form];
-    const index = form.findIndex(it => it.label === type);
-    form.splice(index, 1);
-    console.log(type);
-    dispatch({
-      type: DELETE_FIELD,
       payload: form
     });
   };
@@ -74,7 +63,7 @@ export const FormState = ({ children }) => {
 
   return (
     <FormContext.Provider value={{
-      search, addField, deleteField, changeField,
+      search, addField, changeField,
       form, fields
     }}>
       {children}

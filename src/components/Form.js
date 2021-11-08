@@ -8,7 +8,7 @@ export const Form = ({ children, form, readOnly = false, changeForm }) => {
   return (
     <div className="form">
       {form.map(item => (
-        <React.Fragment key={item.label}>
+        <React.Fragment key={item.id}>
           {item.label === 'Text Field' && (
             <div className="form-group">
               <label htmlFor="exampleFormControlTextarea1">{item.label}</label>

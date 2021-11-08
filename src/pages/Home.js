@@ -5,7 +5,7 @@ import { Form } from '../components/Form';
 import { Link } from 'react-router-dom';
 
 export const Home = () => {
-  const { fields, addField, deleteField, form } = useContext(FormContext);
+  const { fields, addField, form } = useContext(FormContext);
 
   return (
     <>
@@ -19,9 +19,6 @@ export const Home = () => {
                 key={field}
                 className={form.map(it => it.label).includes(field) ? 'field active' : 'field'}
                 onClick={() => {
-                  if (form.find(it => it.label === field)) {
-                    return deleteField(field);
-                  }
                   addField(field);
                 }}
               >

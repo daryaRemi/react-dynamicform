@@ -1,6 +1,5 @@
 import {
   ADD_FIELD,
-  DELETE_FIELD,
   EDIT_FIELD,
   SEARCH_FIELD,
   CHANGE_FIELD
@@ -9,7 +8,6 @@ import {
 const handlers = {
   [SEARCH_FIELD]: (state, { payload }) => ({ ...state, fields: payload }),
   [ADD_FIELD]: (state, { payload }) => ({ ...state, form: payload }),
-  [DELETE_FIELD]: (state, { payload }) => ({ ...state, form: payload }),
   [CHANGE_FIELD]: (state, { payload }) => ({ ...state, form: payload }),
   [EDIT_FIELD]: (state, { payload }) => ({ ...state, form: payload }),
   DEFAULT: state => state
